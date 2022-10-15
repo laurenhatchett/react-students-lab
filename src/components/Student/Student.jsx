@@ -6,8 +6,11 @@ const Student = ({student}) => {
     <h2>{student.name}</h2>
     <h3>{student.bio}</h3>
     <h2>Scores</h2>
-    {student.scores.map(score =>
-      <Score key={student.scores} score={score}/>
+    {student.scores.map((score , idx) =>
+      <Score 
+      key={idx} 
+      score={score}
+      />
       )}
     </>
   );
